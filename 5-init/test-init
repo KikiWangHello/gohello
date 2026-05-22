@@ -1,0 +1,17 @@
+package main
+
+import (
+	_ "GOHELLO/5-init/lib1"
+	_ "GOHELLO/5-init/lib2"
+	"fmt"
+)
+
+func init() {
+	fmt.Println("libmain init")
+}
+
+func main() {
+	fmt.Println("libmian main")
+	lib1.init()
+	lib2.init()
+}
